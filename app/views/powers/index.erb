@@ -1,0 +1,12 @@
+<h2>Here are all the powers in my database!</h2>
+<!-- We use the <%  %> ice cream tags when we want to run ruby code that we don't want the user to see-->
+<!-- We use the <%=  %> squid tags when we want to run ruby code that we DO want the user to see, or in other words, information that lives side by side with the HTML -->
+<!-- BONUS! You can use binding.pry inside of the ERB tags 🤯 -->
+
+<ol>
+  <% @powers.each do |power| %>
+    <li><a href=<%= "/powers/#{power.id}" %>><%= power.name %></a> - <%= power.description %></li>
+  <% end %>
+</ol>
+
+<a href="/powers/new">Make A New Power!</a>

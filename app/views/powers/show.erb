@@ -1,0 +1,10 @@
+<h2><%= @power.name %></h2>
+
+<p><%= @power.description %></p>
+
+<a href=<%= "/powers/#{@power.id}/edit" %>>Edit This Power!</a>
+
+<form action=<%= "/powers/#{@power.id}" %> method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete This Power">
+</form>

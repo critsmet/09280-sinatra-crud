@@ -1,0 +1,12 @@
+<h1>Edit An Instance Of A Power</h1>
+
+<form action="/powers/<%= @power.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="name">Name:</label>
+  <input type="text" name="power[name]" value="<%= @power.name %>">
+  <br/>
+  <label for="name">Description:</label>
+  <textarea name="power[description]"><%= @power.description %></textarea>
+  <br/>
+  <input type="submit" value="Edit This Power!">
+</form>

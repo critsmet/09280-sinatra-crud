@@ -1,0 +1,21 @@
+<h1>Create A New Instance Of A Hero</h1>
+
+<form action="/powers" method="post">
+  <label for="name">Name:</label>
+  <input type="text" name="name" value="">
+  <br/>
+  <label for="name">Motto:</label>
+  <input type="text" name="motto" value="">
+  <br/>
+  <label for="name">Age:</label>
+  <input type="number" name="age" value="">
+  <br/>
+  <label for="Power">Power:</label>
+  <select name="power_id">
+    <% @powers.all.each do |power| %>
+    <option value=<%= power.id %>><%= power.name %></option>
+    <% end %>
+  </select>
+  <br/>
+  <input type="submit" value="Make A New Power!">
+</form>
